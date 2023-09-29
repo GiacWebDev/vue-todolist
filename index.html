@@ -3,16 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="CSS/style.css">
   <!-- VUE JS -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <title>Vue To Do List</title>
 </head>
 <body>
+  
+  <h1>To Do List 📝</h1>
 
+  <div class="container">
+
+    <div class="new-task">
+      <input type="text" placeholder="Nuova task">
+
+      <button>Aggiungi</button>
+    </div>
+
+
+    <div class="tasks-box">
+      <ul>
+
+        <li>
+          <span>testo della task</span>
+          <i class="fa-solid fa-trash"></i>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
 
   <script src="JS/script.js"></script>
 </body>
