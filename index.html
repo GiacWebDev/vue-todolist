@@ -17,26 +17,30 @@
   
   <h1>To Do List 📝</h1>
 
-  <div class="container">
+  <div class="container" id="app">
 
     <div class="new-task">
-      <input type="text" placeholder="Nuova task">
+      <input type="text" placeholder="Scrivi qui la nuova task">
 
-      <button>Aggiungi</button>
+
+      <button @click="addTask">Aggiungi</button>
     </div>
+    <p>Attenzione: inserire <strong>5 caratteri</strong></p>
 
 
     <div class="tasks-box">
       <ul>
 
-        <li>
-          <span>testo della task</span>
+        <li v-for="task in tasks">
+          <span>{{ task }}</span>
           <i class="fa-solid fa-trash"></i>
         </li>
 
       </ul>
     </div>
-
+    
+    <h4>Non ci sono task da svolgere ✅</h4>
+  
   </div>
 
   <script src="JS/script.js"></script>
