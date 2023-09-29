@@ -20,7 +20,7 @@
   <div class="container" id="app">
 
     <div class="new-task">
-      <input type="text" placeholder="Scrivi qui la nuova task" v-model="newTask">
+      <input type="text" placeholder="Scrivi qui la nuova task" v-model.trim="newTask">
 
 
       <button @click="addTask">Aggiungi</button>
@@ -31,9 +31,9 @@
     <div class="tasks-box">
       <ul>
 
-        <li v-for="task in tasks">
+        <li v-for="(task, index) in tasks">
           <span>{{ task }}</span>
-          <i class="fa-solid fa-trash"></i>
+          <i @click="removeTask(index)" class="fa-solid fa-trash"></i>
         </li>
 
       </ul>

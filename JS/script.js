@@ -22,6 +22,11 @@ createApp ({
       this.tasks.unshift(this.newTask);
       // quando inserisco la nuova task si elimina il placeholder
       this.newTask = ''
+    },
+
+    removeTask(index) {
+      // rimuovo il task con indice specifico nell'array
+      this.tasks.splice(index, 1)
     }
   }
 
