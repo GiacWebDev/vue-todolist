@@ -7,28 +7,47 @@ createApp ({
     return {
 
       tasks: [
-        'fare la pizza',
-        'disegnare un quadro',
-        'portare fuori il cane'
+        {
+          text: 'fare la pizza',
+        },
+        {
+          text: 'disegnare un quadro'
+        },
+        {
+          text: 'portare fuori il cane'
+        },
       ],
 
       newTask: '',
-      done: false
+      errorMessage: false
     }
   },
 
   methods: {
     addTask() {
-      this.tasks.unshift(this.newTask);
-      // quando inserisco la nuova task si elimina il placeholder
-      this.newTask = ''
+      if(this.newTask.length < 5) {
+        this.errorMessage = true
+      } else {
+        // aggiungo classe done ad ogni task creata
+        this.tasks.unshift({text: this.newTask, done: false});
+        // quando inserisco la nuova task si elimina il placeholder
+        this.newTask = ''
+      }
     },
 
     removeTask(index) {
       // rimuovo il task con indice specifico nell'array
       this.tasks.splice(index, 1)
+    },
+
+    taskDone(index) {
+      this.tasks[index].done = !this.tasks[index].done;
+      console.log('ciao')
+      
+     
     }
   }
+
 
   
 }).mount('#app');

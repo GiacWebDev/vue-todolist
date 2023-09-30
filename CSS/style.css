@@ -69,3 +69,7 @@ h1 {
   float: right;
   cursor: pointer;
 }
+
+.done {
+  text-decoration: line-through;
+}

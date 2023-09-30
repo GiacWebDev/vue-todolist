@@ -25,21 +25,22 @@
 
       <button @click="addTask">Aggiungi</button>
     </div>
-    <p>Attenzione: inserire <strong>5 caratteri</strong></p>
-
 
     <div class="tasks-box">
       <ul>
 
-        <li v-for="(task, index) in tasks">
-          <span>{{ task }}</span>
-          <i @click="removeTask(index)" class="fa-solid fa-trash"></i>
+        <li 
+        v-for="(task, index) in tasks"
+        @click="taskDone(index)"
+        :class="{ 'done': task.done }">
+          <span>{{ task.text }}</span>
+          <i @click="removeTask(index)" class="fa-solid fa-xmark"></i>
         </li>
 
       </ul>
     </div>
     
-    <h4>Non ci sono task da svolgere ✅</h4>
+    <h4 v-if="tasks.length === 0">Non ci sono task da svolgere ✅</h4>
   
   </div>
 
