@@ -27,6 +27,7 @@ createApp ({
     addTask() {
       if(this.newTask.length < 5) {
         this.errorMessage = true
+        this.newTask = ''
       } else {
         // aggiungo classe done ad ogni task creata
         this.tasks.unshift({text: this.newTask, done: false});

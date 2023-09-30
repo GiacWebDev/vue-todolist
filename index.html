@@ -24,6 +24,7 @@
 
 
       <button @click="addTask">Aggiungi</button>
+      <p v-if="errorMessage" >Attenzione: inserire almeno 5 caratteri</p>
     </div>
 
     <div class="tasks-box">
