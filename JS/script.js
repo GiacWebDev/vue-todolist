@@ -33,6 +33,8 @@ createApp ({
         this.tasks.unshift({text: this.newTask, done: false});
         // quando inserisco la nuova task si elimina il placeholder
         this.newTask = ''
+        // rimuovo il messaggio di errore
+        this.errorMessage = false
       }
     },
 

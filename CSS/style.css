@@ -59,6 +59,7 @@ h1 {
 
 .tasks-box li:hover {
   background-color: white;
+  cursor: pointer;
 }
 
 .tasks-box ul {
@@ -67,7 +68,11 @@ h1 {
 
 .tasks-box li i {
   float: right;
-  cursor: pointer;
+}
+
+.tasks-box li i:hover {
+  transform: scale(1.1);
+  color: brown;
 }
 
 .done {
